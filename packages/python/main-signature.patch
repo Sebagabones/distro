@@ -1,0 +1,2446 @@
+diff --git a/configure b/configure
+index d31c24dffa..07fe29987f 100755
+--- a/configure
++++ b/configure
+@@ -2341,7 +2341,7 @@
+ /* end confdefs.h.  */
+ $4
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ if (sizeof ($2))
+ 	 return 0;
+@@ -2355,7 +2355,7 @@
+ /* end confdefs.h.  */
+ $4
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ if (sizeof (($2)))
+ 	    return 0;
+@@ -2396,7 +2396,7 @@
+ /* end confdefs.h.  */
+ $4
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ static int test_array [1 - 2 * !(($2) >= 0)];
+ test_array [0] = 0;
+@@ -2414,7 +2414,7 @@
+ /* end confdefs.h.  */
+ $4
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ static int test_array [1 - 2 * !(($2) <= $ac_mid)];
+ test_array [0] = 0;
+@@ -2443,7 +2443,7 @@
+ /* end confdefs.h.  */
+ $4
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ static int test_array [1 - 2 * !(($2) < 0)];
+ test_array [0] = 0;
+@@ -2461,7 +2461,7 @@
+ /* end confdefs.h.  */
+ $4
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ static int test_array [1 - 2 * !(($2) >= $ac_mid)];
+ test_array [0] = 0;
+@@ -2500,7 +2500,7 @@
+ /* end confdefs.h.  */
+ $4
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ static int test_array [1 - 2 * !(($2) <= $ac_mid)];
+ test_array [0] = 0;
+@@ -2532,7 +2532,7 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+   FILE *f = fopen ("conftest.val", "w");
+@@ -2616,7 +2616,7 @@
+ #endif
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return $2 ();
+   ;
+@@ -2662,7 +2662,7 @@
+ /* end confdefs.h.  */
+ $4
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ #ifndef $as_decl_name
+ #ifdef __cplusplus
+@@ -2712,7 +2712,7 @@
+ /* end confdefs.h.  */
+ $5
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ static $2 ac_aggr;
+ if (ac_aggr.$3)
+@@ -2729,7 +2729,7 @@
+ /* end confdefs.h.  */
+ $5
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ static $2 ac_aggr;
+ if (sizeof ac_aggr.$3)
+@@ -5412,7 +5412,7 @@
+ /* end confdefs.h.  */
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+   ;
+@@ -5558,7 +5558,7 @@
+ /* end confdefs.h.  */
+ #include <stdio.h>
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ FILE *f = fopen ("conftest.out", "w");
+  if (!f)
+@@ -5626,7 +5626,7 @@
+ /* end confdefs.h.  */
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+   ;
+@@ -5681,7 +5681,7 @@
+ /* end confdefs.h.  */
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ #ifndef __GNUC__
+        choke me
+@@ -5728,7 +5728,7 @@
+ /* end confdefs.h.  */
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+   ;
+@@ -5744,7 +5744,7 @@
+ /* end confdefs.h.  */
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+   ;
+@@ -5761,7 +5761,7 @@
+ /* end confdefs.h.  */
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+   ;
+@@ -6412,7 +6412,7 @@
+ #         define __EXTENSIONS__ 1
+           $ac_includes_default
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+   ;
+@@ -6447,7 +6447,7 @@
+           #include <wchar.h>
+           mbstate_t x;
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+   ;
+@@ -6465,7 +6465,7 @@
+             #include <wchar.h>
+             mbstate_t x;
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+   ;
+@@ -7295,7 +7295,7 @@
+ /* end confdefs.h.  */
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+   ;
+@@ -7650,7 +7650,7 @@
+   CC="$CC -pg"
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+-int main(void) { return 0; }
++int main(int argc, char **argv) { return 0; }
+ _ACEOF
+ if ac_fn_c_try_link "$LINENO"
+ then :
+@@ -8430,7 +8430,7 @@
+ /* end confdefs.h.  */
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+   ;
+@@ -8568,7 +8568,7 @@
+ /* end confdefs.h.  */
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+   ;
+@@ -8753,7 +8753,7 @@
+ /* end confdefs.h.  */
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+   ;
+@@ -8810,7 +8810,7 @@
+ /* end confdefs.h.  */
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+   ;
+@@ -9095,7 +9095,7 @@
+ /* end confdefs.h.  */
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+   ;
+@@ -9437,7 +9437,7 @@
+ /* end confdefs.h.  */
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+   ;
+@@ -9506,7 +9506,7 @@
+ 
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+   ;
+@@ -9752,7 +9752,7 @@
+ /* end confdefs.h.  */
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+   ;
+@@ -9794,7 +9794,7 @@
+ /* end confdefs.h.  */
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+   ;
+@@ -9836,7 +9836,7 @@
+ /* end confdefs.h.  */
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+   ;
+@@ -9878,7 +9878,7 @@
+ /* end confdefs.h.  */
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+   ;
+@@ -9920,7 +9920,7 @@
+ /* end confdefs.h.  */
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+   ;
+@@ -9962,7 +9962,7 @@
+ /* end confdefs.h.  */
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+   ;
+@@ -10028,7 +10028,7 @@
+ /* end confdefs.h.  */
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+   ;
+@@ -10079,7 +10079,7 @@
+ /* end confdefs.h.  */
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+   ;
+@@ -10125,7 +10125,7 @@
+ 
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+   ;
+@@ -10143,7 +10143,7 @@
+ 
+ 	       void f(int **x) {}
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ double *x; f((int **) &x);
+   ;
+@@ -10202,7 +10202,7 @@
+ /* end confdefs.h.  */
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+   ;
+@@ -10249,7 +10249,7 @@
+ /* end confdefs.h.  */
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+   ;
+@@ -10292,7 +10292,7 @@
+ /* end confdefs.h.  */
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+   ;
+@@ -10335,7 +10335,7 @@
+ /* end confdefs.h.  */
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+   ;
+@@ -10378,7 +10378,7 @@
+ /* end confdefs.h.  */
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+   ;
+@@ -10421,7 +10421,7 @@
+ /* end confdefs.h.  */
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+   ;
+@@ -10475,7 +10475,7 @@
+ /* end confdefs.h.  */
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+   ;
+@@ -10516,7 +10516,7 @@
+ 
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+   ;
+@@ -10560,7 +10560,7 @@
+ 
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+   ;
+@@ -10637,7 +10637,7 @@
+ /* end confdefs.h.  */
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+   ;
+@@ -10795,7 +10795,7 @@
+ /* end confdefs.h.  */
+ #include <stdio.h>
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ printf("%d", 42);
+   ;
+@@ -10932,7 +10932,7 @@
+ 
+ void* routine(void* p){return NULL;}
+ 
+-int main(void){
++int main(int argc, char **argv){
+   pthread_t p;
+   if(pthread_create(&p,NULL,routine,NULL)!=0)
+     return 1;
+@@ -10993,7 +10993,7 @@
+ 
+ void* routine(void* p){return NULL;}
+ 
+-int main(void){
++int main(int argc, char **argv){
+   pthread_t p;
+   if(pthread_create(&p,NULL,routine,NULL)!=0)
+     return 1;
+@@ -11048,7 +11048,7 @@
+ 
+ void* routine(void* p){return NULL;}
+ 
+-int main(void){
++int main(int argc, char **argv){
+   pthread_t p;
+   if(pthread_create(&p,NULL,routine,NULL)!=0)
+     return 1;
+@@ -11103,7 +11103,7 @@
+ 
+ void* routine(void* p){return NULL;}
+ 
+-int main(void){
++int main(int argc, char **argv){
+   pthread_t p;
+   if(pthread_create(&p,NULL,routine,NULL)!=0)
+     return 1;
+@@ -11713,7 +11713,7 @@
+ #include <$ac_hdr>
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ if ((DIR *) 0)
+ return 0;
+@@ -11767,7 +11767,7 @@
+ #endif
+ char opendir (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return opendir ();
+   ;
+@@ -11835,7 +11835,7 @@
+ #endif
+ char opendir (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return opendir ();
+   ;
+@@ -12090,7 +12090,7 @@
+ #endif
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+   makedev(0, 0)
+@@ -12141,7 +12141,7 @@
+ #endif
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+    le64toh(1)
+@@ -12243,7 +12243,7 @@
+           #endif
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+   ;
+@@ -12831,7 +12831,7 @@
+ 		 not support it.  */
+ 	      long double foo = 0.0L;
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ static int test_array [1 - 2 * !(/* On Ultrix 4.3 cc, long double is 4 and double is 8.  */
+ 	      sizeof (double) <= sizeof (long double))];
+@@ -13065,7 +13065,7 @@
+ 
+   #include <pthread.h>
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ pthread_t x; x = *(pthread_t*)0;
+   ;
+@@ -13182,7 +13182,7 @@
+ /* end confdefs.h.  */
+ #include <pthread.h>
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ pthread_key_t k; k * 1;
+   ;
+@@ -13380,7 +13380,7 @@
+ /* end confdefs.h.  */
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+   ;
+@@ -13864,7 +13864,7 @@
+ #endif
+ char sendfile (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return sendfile ();
+   ;
+@@ -13915,7 +13915,7 @@
+ #endif
+ char dlopen (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return dlopen ();
+   ;
+@@ -13966,7 +13966,7 @@
+ #endif
+ char shl_load (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return shl_load ();
+   ;
+@@ -14184,7 +14184,7 @@
+ #endif
+ char uuid_generate_time (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return uuid_generate_time ();
+   ;
+@@ -14235,7 +14235,7 @@
+ #endif
+ char uuid_generate_time_safe (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return uuid_generate_time_safe ();
+   ;
+@@ -14328,7 +14328,7 @@
+ #endif
+ char uuid_generate_time (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return uuid_generate_time ();
+   ;
+@@ -14379,7 +14379,7 @@
+ #endif
+ char uuid_generate_time_safe (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return uuid_generate_time_safe ();
+   ;
+@@ -14556,7 +14556,7 @@
+     #endif
+ 
+     #define ERR 1
+-    int main(void) {
++    int main(int argc, char **argv) {
+         uuid_t uuid;  // unsigned char[16]
+         (void)uuid_generate_time_safe(uuid);
+         uint64_t node = 0;
+@@ -14622,7 +14622,7 @@
+     #endif
+ 
+     #define ERR 1
+-    int main(void) {
++    int main(int argc, char **argv) {
+         uuid_t uuid;  // unsigned char[16]
+         (void)uuid_generate_time_safe(uuid);
+         uint64_t node = 0;
+@@ -14691,7 +14691,7 @@
+ #endif
+ char sem_init (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return sem_init ();
+   ;
+@@ -14759,9 +14759,9 @@
+ #ifdef __cplusplus
+ extern "C"
+ #endif
+-char textdomain (void);
++char textdomain (int argc, char **argv);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return textdomain ();
+   ;
+@@ -14800,7 +14800,7 @@
+ 
+ 		  #include <load.h>
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ loadAndInit("", 0, "")
+   ;
+@@ -14862,7 +14862,7 @@
+   e) cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
+-int main(void)
++int main(int argc, char **argv)
+ {
+     char s[16];
+     int i, *p1, *p2;
+@@ -15001,7 +15001,7 @@
+ #endif
+ char t_open (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return t_open ();
+   ;
+@@ -15049,7 +15049,7 @@
+ #endif
+ char socket (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return socket ();
+   ;
+@@ -15100,7 +15100,7 @@
+ #endif
+ char socket (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return socket ();
+   ;
+@@ -15220,7 +15220,7 @@
+ #endif
+ char ffi_call (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return ffi_call ();
+   ;
+@@ -15359,7 +15359,7 @@
+ #endif
+ char ffi_call (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return ffi_call ();
+   ;
+@@ -15441,7 +15441,7 @@
+ #endif
+ char ffi_call (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return ffi_call ();
+   ;
+@@ -15549,7 +15549,7 @@
+ /* end confdefs.h.  */
+ #include <ffi.h>
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ void *x=ffi_prep_cif_var
+   ;
+@@ -15590,7 +15590,7 @@
+ /* end confdefs.h.  */
+ #include <ffi.h>
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ void *x=ffi_prep_closure_loc
+   ;
+@@ -15631,7 +15631,7 @@
+ /* end confdefs.h.  */
+ #include <ffi.h>
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ void *x=ffi_closure_alloc
+   ;
+@@ -15703,7 +15703,7 @@
+     const double complex expected = 1.25 - 0.5 * I;
+     return z == expected;
+ }
+-int main(void)
++int main(int argc, char **argv)
+ {
+     double complex z = 1.25 - 0.5 * I;
+     ffi_type *args[1] = {&ffi_type_complex_double};
+@@ -15874,7 +15874,7 @@
+         #endif
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ const char *x = mpd_version();
+   ;
+@@ -16150,7 +16150,7 @@
+         #endif
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+   ;
+@@ -16185,7 +16185,7 @@
+ #endif
+ char sqlite3_bind_double (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return sqlite3_bind_double ();
+   ;
+@@ -16243,7 +16243,7 @@
+ #endif
+ char sqlite3_column_decltype (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return sqlite3_column_decltype ();
+   ;
+@@ -16301,7 +16301,7 @@
+ #endif
+ char sqlite3_column_double (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return sqlite3_column_double ();
+   ;
+@@ -16359,7 +16359,7 @@
+ #endif
+ char sqlite3_complete (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return sqlite3_complete ();
+   ;
+@@ -16417,7 +16417,7 @@
+ #endif
+ char sqlite3_progress_handler (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return sqlite3_progress_handler ();
+   ;
+@@ -16475,7 +16475,7 @@
+ #endif
+ char sqlite3_result_double (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return sqlite3_result_double ();
+   ;
+@@ -16533,7 +16533,7 @@
+ #endif
+ char sqlite3_set_authorizer (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return sqlite3_set_authorizer ();
+   ;
+@@ -16591,7 +16591,7 @@
+ #endif
+ char sqlite3_trace_v2 (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return sqlite3_trace_v2 ();
+   ;
+@@ -16644,7 +16644,7 @@
+ #endif
+ char sqlite3_trace (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return sqlite3_trace ();
+   ;
+@@ -16708,7 +16708,7 @@
+ #endif
+ char sqlite3_value_double (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return sqlite3_value_double ();
+   ;
+@@ -16765,7 +16765,7 @@
+ #endif
+ char sqlite3_load_extension (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return sqlite3_load_extension ();
+   ;
+@@ -16817,7 +16817,7 @@
+ #endif
+ char sqlite3_serialize (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return sqlite3_serialize ();
+   ;
+@@ -17147,7 +17147,7 @@
+       #endif
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+       void *x1 = Tcl_Init;
+@@ -17219,7 +17219,7 @@
+ #endif
+ char gdbm_open (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return gdbm_open ();
+   ;
+@@ -17300,7 +17300,7 @@
+ #endif
+ char dbm_open (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return dbm_open ();
+   ;
+@@ -17471,7 +17471,7 @@
+ #endif
+ char dbm_open (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return dbm_open ();
+   ;
+@@ -17562,7 +17562,7 @@
+         #endif
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ DBM *dbm = dbm_open(NULL, 0, 0)
+   ;
+@@ -17736,7 +17736,7 @@
+ /* end confdefs.h.  */
+ #include <unistd.h>
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+   #ifdef _POSIX_THREADS
+@@ -17790,7 +17790,7 @@
+ 
+ void * start_routine (void *arg) { exit (0); }
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+ pthread_create (NULL, NULL, start_routine, NULL)
+@@ -17838,7 +17838,7 @@
+ #endif
+ char pthread_create (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return pthread_create ();
+   ;
+@@ -17889,7 +17889,7 @@
+ #endif
+ char pthread_create (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return pthread_create ();
+   ;
+@@ -17940,7 +17940,7 @@
+ #endif
+ char __pthread_create_system (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return __pthread_create_system ();
+   ;
+@@ -17991,7 +17991,7 @@
+ #endif
+ char pthread_create (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return pthread_create ();
+   ;
+@@ -18070,7 +18070,7 @@
+ #endif
+ char usconfig (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return usconfig ();
+   ;
+@@ -18146,7 +18146,7 @@
+       void *foo(void *parm) {
+         return NULL;
+       }
+-      int main(void) {
++      int main(int argc, char **argv) {
+         pthread_attr_t attr;
+         pthread_t id;
+         if (pthread_attr_init(&attr)) return (-1);
+@@ -18240,7 +18240,7 @@
+ #include <sys/types.h>
+ #include <sys/socket.h>
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ int domain = AF_INET6;
+   ;
+@@ -18280,7 +18280,7 @@
+ 	  #include <sys/types.h>
+ #include <netinet/in.h>
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ struct sockaddr_in6 x;
+ 			    x.sin6_scope_id;
+@@ -18336,7 +18336,7 @@
+ /* end confdefs.h.  */
+ #include <netinet/in.h>
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+   #ifdef IPV6_INRIA_VERSION
+@@ -18379,7 +18379,7 @@
+ /* end confdefs.h.  */
+ #include <netinet/in.h>
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+   #ifdef __KAME__
+@@ -18425,7 +18425,7 @@
+ /* end confdefs.h.  */
+ #include <features.h>
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+   #ifdef __GLIBC__
+@@ -18485,7 +18485,7 @@
+ /* end confdefs.h.  */
+ #include <sys/param.h>
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+   #ifdef _TOSHIBA_INET6
+@@ -18530,7 +18530,7 @@
+ /* end confdefs.h.  */
+ #include </usr/local/v6/include/sys/v6config.h>
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+   #ifdef __V6D__
+@@ -18576,7 +18576,7 @@
+ /* end confdefs.h.  */
+ #include <sys/param.h>
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+   #ifdef _ZETA_MINAMI_INET6
+@@ -18656,7 +18656,7 @@
+  /* CAN_RAW_FD_FRAMES available check */
+ #include <linux/can/raw.h>
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ int can_raw_fd_frames = CAN_RAW_FD_FRAMES;
+   ;
+@@ -18697,7 +18697,7 @@
+ 
+ #include <linux/can/raw.h>
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ int can_raw_join_filters = CAN_RAW_JOIN_FILTERS;
+   ;
+@@ -20417,7 +20417,7 @@
+ /* end confdefs.h.  */
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ (void) strchr;
+   ;
+@@ -20442,7 +20442,7 @@
+ extern void ac_decl (int, char *);
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ (void) ac_decl (0, (char *) 0);
+   (void) ac_decl;
+@@ -20509,7 +20509,7 @@
+ /* end confdefs.h.  */
+ #include <unistd.h>
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ void *x=chroot
+   ;
+@@ -20550,7 +20550,7 @@
+ /* end confdefs.h.  */
+ #include <unistd.h>
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ void *x=link
+   ;
+@@ -20591,7 +20591,7 @@
+ /* end confdefs.h.  */
+ #include <unistd.h>
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ void *x=symlink
+   ;
+@@ -20632,7 +20632,7 @@
+ /* end confdefs.h.  */
+ #include <unistd.h>
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ void *x=fchdir
+   ;
+@@ -20673,7 +20673,7 @@
+ /* end confdefs.h.  */
+ #include <unistd.h>
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ void *x=fsync
+   ;
+@@ -20714,7 +20714,7 @@
+ /* end confdefs.h.  */
+ #include <unistd.h>
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ void *x=fdatasync
+   ;
+@@ -20755,7 +20755,7 @@
+ /* end confdefs.h.  */
+ #include <sys/epoll.h>
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ void *x=epoll_create
+   ;
+@@ -20796,7 +20796,7 @@
+ /* end confdefs.h.  */
+ #include <sys/epoll.h>
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ void *x=epoll_create1
+   ;
+@@ -20840,7 +20840,7 @@
+ #include <sys/event.h>
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ void *x=kqueue
+   ;
+@@ -20884,7 +20884,7 @@
+ #include <sys/resource.h>
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ void *x=prlimit
+   ;
+@@ -20926,7 +20926,7 @@
+ /* end confdefs.h.  */
+ #include <mach-o/dyld.h>
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ void *x=_dyld_shared_cache_contains_path
+   ;
+@@ -20975,7 +20975,7 @@
+ #endif
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ void *x=memfd_create
+   ;
+@@ -21021,7 +21021,7 @@
+ #endif
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ void *x=eventfd
+   ;
+@@ -21067,7 +21067,7 @@
+ #endif
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ void *x=timerfd_create
+   ;
+@@ -21115,7 +21115,7 @@
+ /* end confdefs.h.  */
+ #include <stdio.h>
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ void *x=ctermid_r
+   ;
+@@ -21155,7 +21155,7 @@
+ /* end confdefs.h.  */
+ #include <sys/file.h>
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ void* p = flock
+ 
+@@ -21210,7 +21210,7 @@
+ #endif
+ char flock (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return flock ();
+   ;
+@@ -21254,7 +21254,7 @@
+ /* end confdefs.h.  */
+ #include <unistd.h>
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ void *x=getpagesize
+   ;
+@@ -21294,7 +21294,7 @@
+ /* end confdefs.h.  */
+ #include <stdlib.h>
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ int res = unsetenv("DUMMY")
+   ;
+@@ -21396,7 +21396,7 @@
+ #endif
+ char inet_aton (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return inet_aton ();
+   ;
+@@ -21443,7 +21443,7 @@
+ #endif
+ char inet_aton (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return inet_aton ();
+   ;
+@@ -21495,7 +21495,7 @@
+ #endif
+ char hstrerror (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return hstrerror ();
+   ;
+@@ -21542,7 +21542,7 @@
+ #endif
+ char hstrerror (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return hstrerror ();
+   ;
+@@ -21803,7 +21803,7 @@
+ #endif
+ char gzread (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return gzread ();
+   ;
+@@ -21869,7 +21869,7 @@
+ #endif
+ char inflateCopy (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return inflateCopy ();
+   ;
+@@ -21950,7 +21950,7 @@
+ #endif
+ char gzread (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return gzread ();
+   ;
+@@ -22016,7 +22016,7 @@
+ #endif
+ char inflateCopy (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return inflateCopy ();
+   ;
+@@ -22186,7 +22186,7 @@
+ #endif
+ char BZ2_bzCompress (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return BZ2_bzCompress ();
+   ;
+@@ -22278,7 +22278,7 @@
+ #endif
+ char BZ2_bzCompress (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return BZ2_bzCompress ();
+   ;
+@@ -22434,7 +22434,7 @@
+ #endif
+ char lzma_easy_encoder (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return lzma_easy_encoder ();
+   ;
+@@ -22526,7 +22526,7 @@
+ #endif
+ char lzma_easy_encoder (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return lzma_easy_encoder ();
+   ;
+@@ -22675,7 +22675,7 @@
+ #endif
+ char ZDICT_finalizeDictionary (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return ZDICT_finalizeDictionary ();
+   ;
+@@ -22726,7 +22726,7 @@
+ 
+         #include "zstd.h"
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+           #if ZSTD_VERSION_NUMBER < 10405
+@@ -22824,7 +22824,7 @@
+ #endif
+ char ZDICT_finalizeDictionary (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return ZDICT_finalizeDictionary ();
+   ;
+@@ -22875,7 +22875,7 @@
+ 
+         #include "zstd.h"
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+           #if ZSTD_VERSION_NUMBER < 10405
+@@ -22961,7 +22961,7 @@
+ /* end confdefs.h.  */
+ #include <netdb.h>
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ void *x=hstrerror
+   ;
+@@ -23002,7 +23002,7 @@
+ /* end confdefs.h.  */
+ #include <netdb.h>
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ void *x=getservbyname
+   ;
+@@ -23043,7 +23043,7 @@
+ /* end confdefs.h.  */
+ #include <netdb.h>
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ void *x=getservbyport
+   ;
+@@ -23084,7 +23084,7 @@
+ /* end confdefs.h.  */
+ #include <netdb.h>
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ void *x=gethostbyname
+   ;
+@@ -23125,7 +23125,7 @@
+ /* end confdefs.h.  */
+ #include <netdb.h>
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ void *x=gethostbyaddr
+   ;
+@@ -23166,7 +23166,7 @@
+ /* end confdefs.h.  */
+ #include <netdb.h>
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ void *x=getprotobyname
+   ;
+@@ -23215,7 +23215,7 @@
+ #include <arpa/inet.h>
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ void *x=inet_aton
+   ;
+@@ -23261,7 +23261,7 @@
+ #include <arpa/inet.h>
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ void *x=inet_ntoa
+   ;
+@@ -23307,7 +23307,7 @@
+ #include <arpa/inet.h>
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ void *x=inet_pton
+   ;
+@@ -23353,7 +23353,7 @@
+ #include <arpa/inet.h>
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ void *x=getpeername
+   ;
+@@ -23399,7 +23399,7 @@
+ #include <arpa/inet.h>
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ void *x=getsockname
+   ;
+@@ -23445,7 +23445,7 @@
+ #include <arpa/inet.h>
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ void *x=accept
+   ;
+@@ -23491,7 +23491,7 @@
+ #include <arpa/inet.h>
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ void *x=bind
+   ;
+@@ -23537,7 +23537,7 @@
+ #include <arpa/inet.h>
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ void *x=connect
+   ;
+@@ -23583,7 +23583,7 @@
+ #include <arpa/inet.h>
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ void *x=listen
+   ;
+@@ -23629,7 +23629,7 @@
+ #include <arpa/inet.h>
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ void *x=recvfrom
+   ;
+@@ -23675,7 +23675,7 @@
+ #include <arpa/inet.h>
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ void *x=sendto
+   ;
+@@ -23721,7 +23721,7 @@
+ #include <arpa/inet.h>
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ void *x=setsockopt
+   ;
+@@ -23767,7 +23767,7 @@
+ #include <arpa/inet.h>
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ void *x=socket
+   ;
+@@ -23815,7 +23815,7 @@
+ #endif
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ void *x=setgroups
+   ;
+@@ -23905,7 +23905,7 @@
+ #endif
+ char openpty (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return openpty ();
+   ;
+@@ -23953,7 +23953,7 @@
+ #endif
+ char openpty (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return openpty ();
+   ;
+@@ -24008,7 +24008,7 @@
+ #endif
+ char login_tty (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return login_tty ();
+   ;
+@@ -24088,7 +24088,7 @@
+ #endif
+ char forkpty (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return forkpty ();
+   ;
+@@ -24136,7 +24136,7 @@
+ #endif
+ char forkpty (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return forkpty ();
+   ;
+@@ -24236,7 +24236,7 @@
+ /* end confdefs.h.  */
+ #include <unistd.h>
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ getpgrp(0);
+   ;
+@@ -24264,7 +24264,7 @@
+ /* end confdefs.h.  */
+ #include <unistd.h>
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ setpgrp(0,0);
+   ;
+@@ -24329,7 +24329,7 @@
+ #endif
+ char clock_gettime (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return clock_gettime ();
+   ;
+@@ -24400,7 +24400,7 @@
+ #endif
+ char clock_getres (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return clock_getres ();
+   ;
+@@ -24472,7 +24472,7 @@
+ #endif
+ char clock_settime (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return clock_settime ();
+   ;
+@@ -24544,7 +24544,7 @@
+ #endif
+ char clock_nanosleep (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return clock_nanosleep ();
+   ;
+@@ -24612,7 +24612,7 @@
+ #endif
+ char nanosleep (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return nanosleep ();
+   ;
+@@ -24667,7 +24667,7 @@
+ #endif
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+   makedev(major(0),minor(0));
+@@ -24721,7 +24721,7 @@
+ #include <stdio.h>
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ getaddrinfo(NULL, NULL, NULL, NULL);
+   ;
+@@ -24773,7 +24773,7 @@
+ #include <sys/socket.h>
+ #include <netinet/in.h>
+ 
+-int main(void)
++int main(int argc, char **argv)
+ {
+   int passive, gaierr, inet4 = 0, inet6 = 0;
+   struct addrinfo hints, *ai, *aitop;
+@@ -24911,7 +24911,7 @@
+ #include <time.h>
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ struct tm tm;
+ 				     int *p = &tm.tm_sec;
+@@ -24980,7 +24980,7 @@
+ #endif
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return tzname[0][0];
+   ;
+@@ -25109,7 +25109,7 @@
+ /* end confdefs.h.  */
+ #include <time.h>
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return altzone;
+   ;
+@@ -25145,7 +25145,7 @@
+ /* end confdefs.h.  */
+ #include <netdb.h>
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ struct addrinfo a
+   ;
+@@ -25182,7 +25182,7 @@
+ #		include <sys/types.h>
+ #		include <sys/socket.h>
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ struct sockaddr_storage s
+   ;
+@@ -25220,7 +25220,7 @@
+ #		include <sys/socket.h>
+ #		include <linux/if_alg.h>
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ struct sockaddr_alg s
+   ;
+@@ -25257,7 +25257,7 @@
+ /* end confdefs.h.  */
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+ #ifndef __cplusplus
+@@ -25344,7 +25344,7 @@
+ /* end confdefs.h.  */
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ signed char c;
+   ;
+@@ -25384,7 +25384,7 @@
+ /* end confdefs.h.  */
+ int foo(int x) { return 0; }
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return foo(10);
+   ;
+@@ -25430,7 +25430,7 @@
+ #include <sys/socket.h>
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ void *x=socketpair
+   ;
+@@ -25473,7 +25473,7 @@
+ #include <sys/types.h>
+ #include <sys/socket.h>
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ struct sockaddr x;
+ x.sa_len = 0;
+@@ -25521,7 +25521,7 @@
+ #   include <netdb.h>
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+     char *name;
+@@ -25559,7 +25559,7 @@
+ #       include <netdb.h>
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+         char *name;
+@@ -25597,7 +25597,7 @@
+ #           include <netdb.h>
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+             char *name;
+@@ -25689,7 +25689,7 @@
+ #endif
+ char __fpu_control (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return __fpu_control ();
+   ;
+@@ -25795,7 +25795,7 @@
+ /* end confdefs.h.  */
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+   __asm__ __volatile__ ("movq %rcx, %rax");
+@@ -25930,7 +25930,7 @@
+ /* end confdefs.h.  */
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+   unsigned short cw;
+@@ -25975,7 +25975,7 @@
+ /* end confdefs.h.  */
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+   unsigned int fpcr;
+@@ -26033,7 +26033,7 @@
+ 
+ #include <stdlib.h>
+ #include <math.h>
+-int main(void) {
++int main(int argc, char **argv) {
+     volatile double x, y, z;
+     /* 1./(1-2**-53) -> 1+2**-52 (correct), 1.0 (double rounding) */
+     x = 0.99999999999999989; /* 1-2**-53 */
+@@ -26126,7 +26126,7 @@
+       #include <semaphore.h>
+       #include <sys/stat.h>
+ 
+-      int main(void) {
++      int main(int argc, char **argv) {
+         sem_t *a = sem_open("/autoconf", O_CREAT, S_IRUSR|S_IWUSR, 0);
+         if (a == SEM_FAILED) {
+           perror("sem_open");
+@@ -26185,7 +26185,7 @@
+       #include <semaphore.h>
+       #include <sys/stat.h>
+ 
+-      int main(void){
++      int main(int argc, char **argv){
+         sem_t *a = sem_open("/autocftw", O_CREAT, S_IRUSR|S_IWUSR, 0);
+         int count;
+         int res;
+@@ -26524,7 +26524,7 @@
+ 	     #include <sys/param.h>
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ #if ! (defined BYTE_ORDER && defined BIG_ENDIAN \\
+ 		     && defined LITTLE_ENDIAN && BYTE_ORDER && BIG_ENDIAN \\
+@@ -26545,7 +26545,7 @@
+ 		#include <sys/param.h>
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ #if BYTE_ORDER != BIG_ENDIAN
+ 		 not big endian
+@@ -26573,7 +26573,7 @@
+ #include <limits.h>
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ #if ! (defined _LITTLE_ENDIAN || defined _BIG_ENDIAN)
+ 	      bogus endian macros
+@@ -26591,7 +26591,7 @@
+ #include <limits.h>
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ #ifndef _BIG_ENDIAN
+ 		 not big endian
+@@ -26665,7 +26665,7 @@
+ /* end confdefs.h.  */
+ $ac_includes_default
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+ 	     /* Are we little or big endian?  From Harbison&Steele.  */
+@@ -26869,7 +26869,7 @@
+   e) cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
+-int main(void)
++int main(int argc, char **argv)
+ {
+ 	return (((-1)>>3 == -1) ? 0 : 1);
+ }
+@@ -26910,7 +26910,7 @@
+ /* end confdefs.h.  */
+ #include <stdio.h>
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+ 	FILE *f = fopen("/dev/null", "r");
+@@ -27069,7 +27069,7 @@
+ #endif
+ char readline (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return readline ();
+   ;
+@@ -27158,7 +27158,7 @@
+ #endif
+ char readline (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return readline ();
+   ;
+@@ -27320,7 +27320,7 @@
+ #endif
+ char readline (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return readline ();
+   ;
+@@ -27411,7 +27411,7 @@
+ #endif
+ char readline (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return readline ();
+   ;
+@@ -27563,7 +27563,7 @@
+       #endif
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ void *x = rl_pre_input_hook
+   ;
+@@ -27614,7 +27614,7 @@
+       #endif
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ void *x = rl_completion_display_matches_hook
+   ;
+@@ -27665,7 +27665,7 @@
+       #endif
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ void *x = rl_resize_terminal
+   ;
+@@ -27716,7 +27716,7 @@
+       #endif
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ void *x = rl_completion_matches
+   ;
+@@ -27786,7 +27786,7 @@
+       #endif
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ void *x = append_history
+   ;
+@@ -27859,7 +27859,7 @@
+ 
+                 extern int test_hook_func(const char *text, int state);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ rl_startup_hook=test_hook_func;
+   ;
+@@ -27916,7 +27916,7 @@
+ 
+ #include <stdlib.h>
+ #include <unistd.h>
+-int main(void)
++int main(int argc, char **argv)
+ {
+ 	int val1 = nice(1);
+ 	if (val1 != -1 && val1 == nice(2))
+@@ -27964,7 +27964,7 @@
+ #include <poll.h>
+ #include <unistd.h>
+ 
+-int main(void)
++int main(int argc, char **argv)
+ {
+     struct pollfd poll_struct = { 42, POLLIN|POLLPRI|POLLOUT, 0 };
+     int poll_test;
+@@ -28027,7 +28027,7 @@
+ extern char *tzname[];
+ #endif
+ 
+-int main(void)
++int main(int argc, char **argv)
+ {
+ 	/* Note that we need to ensure that not only does tzset(3)
+ 	   do 'something' with localtime, but it works as documented
+@@ -28117,7 +28117,7 @@
+ /* end confdefs.h.  */
+ #include <sys/stat.h>
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+ struct stat st;
+@@ -28157,7 +28157,7 @@
+ /* end confdefs.h.  */
+ #include <sys/stat.h>
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+ struct stat st;
+@@ -28203,7 +28203,7 @@
+ #include <time.h>
+ #include <string.h>
+ 
+-int main(void)
++int main(int argc, char **argv)
+ {
+   char year[5];
+   struct tm date = {
+@@ -28258,7 +28258,7 @@
+ #include <time.h>
+ #include <string.h>
+ 
+-int main(void)
++int main(int argc, char **argv)
+ {
+   char full_date[11];
+   struct tm date = {
+@@ -28692,7 +28692,7 @@
+ #endif
+ char initscr (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return initscr ();
+   ;
+@@ -28766,7 +28766,7 @@
+ #endif
+ char update_panels (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return update_panels ();
+   ;
+@@ -28888,7 +28888,7 @@
+ #endif
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+   int rtn;
+@@ -28943,7 +28943,7 @@
+ #endif
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+   WINDOW *w;
+@@ -29003,7 +29003,7 @@
+ #endif
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+         #ifndef is_pad
+@@ -29063,7 +29063,7 @@
+ #endif
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+         #ifndef is_term_resized
+@@ -29123,7 +29123,7 @@
+ #endif
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+         #ifndef resize_term
+@@ -29183,7 +29183,7 @@
+ #endif
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+         #ifndef resizeterm
+@@ -29243,7 +29243,7 @@
+ #endif
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+         #ifndef immedok
+@@ -29303,7 +29303,7 @@
+ #endif
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+         #ifndef syncok
+@@ -29363,7 +29363,7 @@
+ #endif
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+         #ifndef wchgat
+@@ -29423,7 +29423,7 @@
+ #endif
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+         #ifndef filter
+@@ -29483,7 +29483,7 @@
+ #endif
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+         #ifndef has_key
+@@ -29543,7 +29543,7 @@
+ #endif
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+         #ifndef typeahead
+@@ -29603,7 +29603,7 @@
+ #endif
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+         #ifndef use_env
+@@ -29769,7 +29769,7 @@
+ #include <stddef.h>
+ #include <stdio.h>
+ #include <stdlib.h>
+-int main(void) {
++int main(int argc, char **argv) {
+     size_t len = -1;
+     const char *str = "text";
+     len = mbstowcs(NULL, str, 0);
+@@ -30007,7 +30007,7 @@
+ /* end confdefs.h.  */
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+   ;
+@@ -30049,7 +30049,7 @@
+ #include <stdlib.h>
+ #include <string.h>
+ void foo(void *p, void *q) { memmove(p, q, 19); }
+-int main(void) {
++int main(int argc, char **argv) {
+   char a[32] = "123456789000000000";
+   foo(&a[9], a);
+   if (strcmp(a, "123456789123456789000000000") != 0)
+@@ -30108,7 +30108,7 @@
+               );
+               return r;
+             }
+-            int main(void) {
++            int main(int argc, char **argv) {
+               int p = 8;
+               if ((foo(&p) ? : p) != 6)
+                 return 1;
+@@ -30193,7 +30193,7 @@
+ 
+     #include <dirent.h>
+ 
+-    int main(void) {
++    int main(int argc, char **argv) {
+       struct dirent entry;
+       return entry.d_type == DT_UNKNOWN;
+     }
+@@ -30241,7 +30241,7 @@
+     #include <sys/syscall.h>
+     #include <linux/random.h>
+ 
+-    int main(void) {
++    int main(int argc, char **argv) {
+         char buffer[1];
+         const size_t buflen = sizeof(buffer);
+         const int flags = GRND_NONBLOCK;
+@@ -30292,7 +30292,7 @@
+     #include <stddef.h>
+     #include <sys/random.h>
+ 
+-    int main(void) {
++    int main(int argc, char **argv) {
+         char buffer[1];
+         const size_t buflen = sizeof(buffer);
+         const int flags = 0;
+@@ -30357,7 +30357,7 @@
+ #endif
+ char shm_open (void);
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ return shm_open ();
+   ;
+@@ -30631,7 +30631,7 @@
+ /* end confdefs.h.  */
+ #include <openssl/ssl.h>
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ SSL_new(NULL)
+   ;
+@@ -30796,7 +30796,7 @@
+       static void keylog_cb(const SSL *ssl, const char *line) {}
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+       SSL_CTX *ctx = SSL_CTX_new(TLS_client_method());
+@@ -30860,7 +30860,7 @@
+       #endif
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+       OBJ_nid2sn(NID_md5);
+@@ -32608,7 +32608,7 @@
+ /* end confdefs.h.  */
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+   ;
+@@ -32685,7 +32685,7 @@
+ /* end confdefs.h.  */
+ 
+ int
+-main (void)
++main (int argc, char **argv)
+ {
+ 
+   ;
