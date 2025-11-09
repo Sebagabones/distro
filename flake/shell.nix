@@ -3,12 +3,15 @@
   imports = [ inputs.make-shell.flakeModules.default ];
 
   perSystem =
-    { pkgs, ... }:
+    { pkgs, config, ... }:
     {
       make-shells.default = {
         stdenv = pkgs.stdenvNoCC;
-        packages = with pkgs; [
-          just
+        packages = [
+          pkgs.just
+          pkgs.lld
+          pkgs.llvm
+          config.legacyPackages.hostpkgs.clang
         ];
       };
 
@@ -18,6 +21,7 @@
           attic-client
           jq
           nix-eval-jobs
+          llvm
         ];
       };
     };
